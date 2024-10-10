@@ -2,20 +2,9 @@
 import axios, {InternalAxiosRequestConfig} from "axios";
 import type {AxiosInstance, AxiosRequestConfig, AxiosResponse} from "axios";
 import {toast} from "@/hooks/use-toast";
+import {Result} from "@/api/typings";
 
-type Result<T> = {
-	code: number;
-	message: string;
-	data: T;
-};
 
-export type PageData<T> = {
-	records: T[];
-	total: number;
-	size: number;
-	current: number;
-	pages: number;
-}
 
 // 导出Request类，可以用来自定义传递配置来创建实例
 export class Request {

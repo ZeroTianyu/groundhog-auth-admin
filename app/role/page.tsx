@@ -1,19 +1,18 @@
 "use client"
 import {Button} from "@/components/ui/button";
 import {toast} from "@/hooks/use-toast";
-import axiosInstance, {PageData} from "@/lib/axios-instance";
-
-interface Role {
-	id: string,
-	roleName: string,
-}
+import {useEffect} from "react";
+import {rolePage} from "@/api/role";
 
 export default function Page() {
-	axiosInstance.get<PageData<Role>>("/role/page").then((response) => {
-		console.log(response.data.data.records);
-	}).catch((err) => {
-		toast({title: "请求错误", description: err.message, variant: "destructive"});
-	})
+
+
+	useEffect(() => {
+		rolePage().then(e => {
+			console.log(e);
+		})
+	}, []);
+
 	return (
 		<Button
 			onClick={() => {
