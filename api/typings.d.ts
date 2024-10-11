@@ -27,3 +27,8 @@ export interface BaseEntity {
 	deleted: boolean;
 
 }
+// 分页基础请求对象
+export interface PageRequest {
+	page: number;
+	size: number;
+}
