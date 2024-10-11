@@ -5,7 +5,6 @@ import {toast} from "@/hooks/use-toast";
 import {Result} from "@/api/typings";
 
 
-
 // 导出Request类，可以用来自定义传递配置来创建实例
 export class Request {
 	// axios 实例
@@ -113,7 +112,8 @@ export class Request {
 
 	public post<T = never>(
 		url: string,
-		data?: never,
+		// eslint-disable-next-line
+		data?: any,
 		config?: AxiosRequestConfig
 	): Promise<AxiosResponse<Result<T>>> {
 		return this.instance.post(url, data, config);
@@ -121,7 +121,8 @@ export class Request {
 
 	public put<T = never>(
 		url: string,
-		data?: never,
+		// eslint-disable-next-line
+		data?: any,
 		config?: AxiosRequestConfig
 	): Promise<AxiosResponse<Result<T>>> {
 		return this.instance.put(url, data, config);

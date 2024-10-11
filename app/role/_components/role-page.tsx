@@ -10,11 +10,8 @@ export default function RolePage() {
 	const [roleList, setRoleList] = useState<Role[]>([]);
 
 	const [pageRequest, setPageRequest] = useState<RolePageRequest>({
-		deleted: null,
-		id: null,
-		page: 10,
-		roleName: null,
-		size: 1
+		page: 1,
+		size: 10
 	});
 
 	useEffect(() => {

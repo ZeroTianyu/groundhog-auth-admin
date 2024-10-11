@@ -9,7 +9,14 @@ interface Role extends BaseEntity {
 
 // 角色分页请求对象
 interface RolePageRequest extends PageRequest {
-	id: string | null,
-	roleName: string | null,
-	deleted: boolean | null,
+	id?: string,
+	roleName?: string,
+	deleted?: boolean,
+}
+
+// 角色新增或修改对象
+interface CreateOrUpdateRoleRequest {
+	id?: string,
+	roleName: string,
+	sort?: number,
 }
