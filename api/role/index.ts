@@ -12,5 +12,4 @@ export function rolePage(pageRequest: RolePageRequest) {
 // 创建或更新
 export function createOrUpdateRole(request: CreateOrUpdateRoleRequest) {
 	return axiosInstance.post<boolean>("/role/createOrUpdate", request);
-
 }

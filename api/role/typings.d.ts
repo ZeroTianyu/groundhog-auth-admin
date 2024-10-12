@@ -11,7 +11,8 @@ interface Role extends BaseEntity {
 interface RolePageRequest extends PageRequest {
 	id?: string,
 	roleName?: string,
-	deleted?: boolean,
+	beginCreateDate?: Date,
+	endCreateDate?: Date,
 }
 
 // 角色新增或修改对象
